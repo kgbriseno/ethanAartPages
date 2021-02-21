@@ -1,55 +1,48 @@
-.grid:after {
-    content: '';
-    display: block;
-    clear: both;
+
+.carousel-control-next-icon, 
+.carousel-control-prev-icon{
+  filter: invert(1);
+} 
+
+.carousel-inner{
+  width:400px;
+  height: auto;
+  margin: 0 auto;
+
+}
+#custCarousel{
+  margin-top: 20px;
+}
+#custCarousel .carousel-indicators {
+  position: static;
+  margin-top: 10px;
+}
+
+#custCarousel .carousel-indicators>li {
+  width: 100px;
+  margin-bottom: 80px;
+
+}
+
+#custCarousel .carousel-indicators li img {
+  display: block;
+  max-width: 100%;  
+}
+#custCarousel .carousel-indicators li.active img {
+
+  border: 2px solid grey;
+}
+
+
+.carousel-item img {
+  width: 50%
+}
+@media screen and (max-width: 800px){
+  .carousel-inner{
+      width:250px;
+      height: 550px;
+      margin: 0 auto;
   }
-  
-  .grid-sizer,
-  .grid-item {
-    width: 33.333%;
-  }
-  @media (max-width: 575px) {
-    .grid-sizer,
-    .grid-item {
-      width: 100%;
-    }
-  }
-  @media (min-width: 576px) and (max-width: 767px) {
-    .grid-sizer,
-    .grid-item {
-      width: 50%;
-    }
-  }
-  
-  /* To change the amount of columns on larger devices, uncomment the code below */
-  
-   @media (min-width: 768px) and (max-width: 991px) {
-    .grid-sizer,
-    .grid-item {
-      width: 33.333%;
-    }
-  }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .grid-sizer,
-    .grid-item {
-      width: 30%;
-    }
-  }
-  @media (min-width: 1200px) {
-    .grid-sizer,
-    .grid-item {
-      width: 25%;
-    }
-  } 
-  
-  .grid-item {
-    float: left;
-  }
-  
-  .grid-item img {
-    display: block;
-    width: 50%;
-    padding: 1em 1em 1em 1em;
-    margin: 1em 1em 1em 1em;
-  }
-  
+
+
+}

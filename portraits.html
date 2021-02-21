@@ -41,6 +41,22 @@
 		  gtag('js', new Date());
 		
 		  gtag('config', 'UA-130204150-1');
+
+		  var $grid = $('.grid').masonry({
+		itemSelector: '.grid-item',
+		percentPosition: true,
+		columnWidth: '.grid-sizer'
+	});
+
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry();
+	});  
+	</script>
+<style>
+	.side-header #logo img {
+		height: auto !important;
+	}
 	</script>
 	<style>
 		.side-header #logo img {
@@ -297,88 +313,98 @@
         <div class="container">
 
             <section id="content">
-                <div class="content-wrap">
-                    <div class="container clearfix">
-                        <div class="grid">
-                            <div class="grid-sizer"></div>
-                            
-                            <div class="grid-item">
-                              <img class="js-modal-image"  src="images/por0018.png" />
-                              <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                            </div>
-                            <div class="grid-item">
-                              <img class="js-modal-image" src="/images/por0017.jpg" />
-                              <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                            </div>
-                            <div class="grid-item">
-                              <img class="js-modal-image" src="/images/133_por0016.jpg" />
-                              <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                            </div>
-                            <div class="grid-item">
-                                <img class="js-modal-image" src="images/178_por0014.jpg" />
-                                <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                              </div>
-                            <div class="grid-item">
-                              <img class="js-modal-image" src="images/133_por0015.jpg" />
-                              <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                            </div>
-                            <div class="grid-item">
-                              <img class="js-modal-image" src="images/133_r-por0001.png" />
-                              <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                            </div>
-                            <div class="grid-item">
-                              <img class="js-modal-image" src="images/133_por0002.png" />
-                              <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                            </div>
-                            <div class="grid-item">
-                              <img class="js-modal-image" src="images/133_por0003.png" />
-                              <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                            </div>
-                            <div class="grid-item">
-                              <img class="js-modal-image" src="images/133_por0004.jpg" />
-                              <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                            </div>
-                            <div class="grid-item">
-                                <img class="js-modal-image"  src="images/133_r-por0005.png" />
-                                <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                              </div>
-                              <div class="grid-item">
-                                <img class="js-modal-image" src="/images/133_por0006.jpg" />
-                                <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                              </div>
-                              <div class="grid-item">
-                                <img class="js-modal-image" src="/images/133_por0007.png" />
-                                <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                              </div>
-                              <div class="grid-item">
-                                <img class="js-modal-image" src="images/133_por0008.jpg" />
-                                <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                              </div>
-                              <div class="grid-item">
-                                <img class="js-modal-image" src="images/178_por0009.jpg" />
-                                <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                              </div>
-                              <div class="grid-item">
-                                <img class="js-modal-image" src="images/178_por0010.jpg" />
-                                <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                              </div>
-                              <div class="grid-item">
-                                <img class="js-modal-image" src="images/126_por0011.png" />
-                                <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                              </div>
-                              <div class="grid-item">
-                                <img class="js-modal-image" src="images/178_por0012.jpg" />
-                                <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                              </div>
-                              <div class="grid-item">
-                                <img class="js-modal-image" src="images/133_r-por0013.png" />
-                                <a class="click-to-expand" href="#" data-toggle="modal" data-target="#modalGallery"></a>
-                              </div>
-                              
-                          
-                        </div>
-                    </div>
-                </div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+								<!-- slides -->
+								<div class="carousel-inner d-flex align-items-center">
+									<div class="carousel-item active">
+										<img src="images/178_por0010.jpg" alt="">									</div>
+									<div class="carousel-item">
+										<img src="images/por0018.png" alt="">										
+									</div>
+									<div class="carousel-item">
+										<img src="/images/por0017.jpg" alt="">										
+									</div>
+									<div class="carousel-item">
+										<img src="/images/133_por0016.jpg" alt="">										
+									</div>
+		
+									<div class="carousel-item">
+										<img src="images/178_por0014.jpg" alt="">										
+									</div>
+									<div class="carousel-item">
+										<img src="images/178_por0012.jpg" alt="">										
+									</div>
+									<div class="carousel-item">
+										<img src="images/133_por0015.jpg" alt="">										
+									</div>
+									<div class="carousel-item">
+										<img src="images/133_r-por0001.png" alt="">
+									</div>
+									<div class="carousel-item">
+										<img src="images/133_por0002.png" alt="">										<h3>Believe in the Best Version of Yourself 2012</h3>
+									</div>
+									<div class="carousel-item">
+										<img src="images/133_por0003.png" alt="">						
+									</div>
+									<div class="carousel-item">
+										<img src="images/133_por0004.jpg" alt="">										
+									</div>
+									<div class="carousel-item">
+										<img src="images/133_r-por0005.png" alt="">										
+									</div>
+									<div class="carousel-item">
+										<img src="/images/133_por0006.jpg" alt="">
+									</div>								
+									<div class="carousel-item">
+										<img src="/images/133_por0007.png" alt="l">		
+									</div>
+									<div class="carousel-item">
+										<img src="images/133_por0008.jpg" alt="">
+									</div>
+									<div class="carousel-item">
+										<img src="images/178_por0009.jpg" alt=“”>
+									</div>
+									<div class="carousel-item">
+										<img src="images/126_por0011.png" alt="">
+									</div>
+									<div class="carousel-item">
+										<img src="images/133_r-por0013.png" alt="">
+									</div>
+								</div> <!-- Left right --> 
+								<a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> 
+									<span class="carousel-control-prev-icon"></span> </a> 
+								<a class="carousel-control-next" href="#custCarousel" data-slide="next"> 
+									<span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
+									<ol class="carousel-indicators list-inline d-flex align-items-center">
+										<li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="images/178_por0010.jpg" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="images/por0018.png" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="/images/por0017.jpg" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel"> <img src="/images/133_por0016.jpg" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="4" data-target="#custCarousel"> <img src="images/178_por0014.jpg" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="5" data-target="#custCarousel"> <img src="images/178_por0012.jpg" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="6" data-target="#custCarousel"> <img src="images/133_por0015.jpg" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="7" data-target="#custCarousel"> <img src="images/133_r-por0001.png" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="8" data-target="#custCarousel"> <img src="images/133_por0002.png" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="9" data-target="#custCarousel"> <img src="images/133_por0003.png" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="10" data-target="#custCarousel"> <img src="images/133_por0004.png" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="11" data-target="#custCarousel"> <img src="images/133_r-por0005.png" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="12" data-target="#custCarousel"> <img src="/images/133_por0006.jpg" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="13" data-target="#custCarousel"> <img src="/images/133_por0007.png" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="14" data-target="#custCarousel"> <img src="/images/133_por0008.jpg" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="15" data-target="#custCarousel"> <img src="/images/178_por0009.jpg" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="16" data-target="#custCarousel"> <img src="/images/126_por0011.png" class="img-fluid"> </a> </li>
+										<li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="17" data-target="#custCarousel"> <img src="/images/133_r-por0013.png" class="img-fluid"> </a> </li>
+
+									</ol>
+							</div>
+		
+						</div>
+						
+					</div>
+				</div>
             </section>
     
     
@@ -416,14 +442,15 @@
             }
             @media screen and (min-width:480px){
             #wowslider-container1 {
-                height: 700px;
+                height: 500px;
                 }
             }
         </style>
         <!--disable right click and copy & paste-->
         <script type="text/javascript">
             $(document).ready(function(){$("body").bind("cut copy paste",function(n){n.preventDefault()}),$("body").on("contextmenu",function(n){return!1})});
-        </script>
+		</script>
+		
     </body>
 
 
